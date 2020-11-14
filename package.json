@@ -1,0 +1,19 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "MERN Ecommerce App",
+  "main": "server.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedELsaikaly/Ecommerce-MERN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedELsaikaly/Ecommerce-MERN/issues"
+  },
+  "homepage": "https://github.com/AhmedELsaikaly/Ecommerce-MERN#readme"
+}
