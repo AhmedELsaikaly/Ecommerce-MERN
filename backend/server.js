@@ -1,11 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import products from "./data/products.js";
-// const connectDB = require("./config/db");
-
+import connectDB from "./config/db.js";
+import colors from "colors";
 const app = express();
+
 // connect DB
-// connectDB();
+connectDB();
+
+// dotenv secret keys
 dotenv.config();
 // init Middleware
 app.use(express.json({ extended: false }));
@@ -22,14 +25,16 @@ app.get("/api/products/:id", (req, res) => {
   res.json(product);
 });
 
-const PORT = process.env.PORT || 5000;
 // Define Routes
 // app.use("/api/users", require("./routes/api/users"));
 // app.use("/api/auth", require("./routes/api/auth"));
 // app.use("/api/profile", require("./routes/api/profile"));
 // app.use("/api/posts", require("./routes/api/posts"));
+const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () =>
   console.log(
-    `server connected on ${process.env.NODE_ENV} mode on port ${PORT}`
+    `server connected on ${process.env.NODE_ENV} mode on port ${PORT}`.yellow
+      .bold
   )
 );
