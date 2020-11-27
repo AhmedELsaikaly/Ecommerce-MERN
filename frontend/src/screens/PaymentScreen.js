@@ -46,7 +46,7 @@ const PaymentScreen = ({ history }) => {
                 PayPal or CreditCard
               </label>
             </div>
-            <div className="radio">
+            {/* <div className="radio">
               <label>
                 <input
                   type="radio"
@@ -57,7 +57,7 @@ const PaymentScreen = ({ history }) => {
                 />
                 Stripe
               </label>
-            </div>
+            </div> */}
           </Col>
         </Form.Group>
 

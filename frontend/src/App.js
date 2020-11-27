@@ -18,6 +18,7 @@ import UserEditScreen from "./screens/UserEditScreen.js";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
 import OrderListScreen from "./screens/OrderListScreen.js";
+import NotFound from "./screens/NotFound";
 const App = () => {
   return (
     <Router>
@@ -63,6 +64,7 @@ const App = () => {
               path="/admin/product/:id/edit"
               component={ProductEditScreen}
             />
+            <Route path="*" component={NotFound} /> 
           </Switch>
         </Container>
       </main>
