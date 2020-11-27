@@ -16,7 +16,6 @@ const storage = multer.diskStorage({
   },
 });
 
-
 router.post("/", (req, res, next) => {
   const upload = multer({ storage }).single("image");
   upload(req, res, function (err) {
@@ -39,7 +38,6 @@ router.post("/", (req, res, next) => {
       { public_id: `product/${uniqueFilename}`, tags: `product` }, // directory and tags are optional
       function (err, image) {
         if (err) return res.send(err);
-        console.log("file uploaded to Cloudinary");
         // remove file from server
         fs.unlinkSync(path);
         // return image details
