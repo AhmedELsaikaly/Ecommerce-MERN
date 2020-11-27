@@ -55,7 +55,7 @@ const ProfileScreen = ({ location, history }) => {
 
   return (
     <Row>
-      <Col md={3} className="mb-5">
+      <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message variant="danger">{message}</Message>}
         {}
@@ -65,7 +65,7 @@ const ProfileScreen = ({ location, history }) => {
         ) : error ? (
           <Message variant="danger">{error}</Message>
         ) : (
-          <Form onSubmit={submitHandler}>
+          <Form onSubmit={submitHandler} className="mb-4">
             <Form.Group controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
@@ -73,7 +73,7 @@ const ProfileScreen = ({ location, history }) => {
                 placeholder="Enter name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                autoComplete="on"
+                autoComplete="true"
               ></Form.Control>
             </Form.Group>
 
@@ -84,7 +84,7 @@ const ProfileScreen = ({ location, history }) => {
                 placeholder="Enter email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                autoComplete="on"
+                autoComplete="true"
               ></Form.Control>
             </Form.Group>
 
@@ -95,7 +95,7 @@ const ProfileScreen = ({ location, history }) => {
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                autoComplete="on"
+                autoComplete="true"
               ></Form.Control>
             </Form.Group>
 
@@ -106,7 +106,7 @@ const ProfileScreen = ({ location, history }) => {
                 placeholder="Confirm password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                autoComplete="on"
+                autoComplete="true"
               ></Form.Control>
             </Form.Group>
 
