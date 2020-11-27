@@ -22,7 +22,6 @@ router.post("/", (req, res, next) => {
     if (err) {
       return res.send(err);
     }
-    console.log(req.file.path);
     // SEND FILE TO CLOUDINARY
     cloudinary.config({
       cloud_name: process.env.CLOUDINARY_NAME,
