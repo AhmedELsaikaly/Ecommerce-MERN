@@ -6,14 +6,12 @@ import {
   Col,
   ListGroup,
   Image,
-  Form,
   Button,
   Card,
   ListGroupItem,
   FormControl,
 } from "react-bootstrap";
 import Message from "../components/Message";
-import Loader from "../components/Loader";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
 const CartScreen = ({ match, location, history }) => {

@@ -22,9 +22,6 @@ const PaymentScreen = ({ history }) => {
     dispatch(savePaymentMethod(paymentMethod));
     history.push("/placeorder");
   };
-  const handelPaymentMethod = (e) => {
-    setPaymentMethod(e.target.value);
-  };
 
   return (
     <FormContainer>
