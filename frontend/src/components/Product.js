@@ -23,7 +23,6 @@ const Product = ({ product }) => {
         </Card.Text>
 
         <Card.Text as="h3">${product.price}</Card.Text>
-        <Button variant="primary">Add to cart</Button>
       </Card.Body>
     </Card>
   );

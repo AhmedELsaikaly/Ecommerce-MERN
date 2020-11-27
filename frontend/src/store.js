@@ -7,6 +7,8 @@ import {
   productDeleteReducer,
   productCreateReducer,
   productUpdateReducer,
+  productReviewCreateReducer,
+  productTopRatedReducer,
 } from "./reducers/productReducers";
 import { cartReducer } from "./reducers/cartReducers";
 import {
@@ -23,6 +25,8 @@ import {
   orderDetailsReducer,
   orderPayReducer,
   userOrderListReducer,
+  OrderListReducer,
+  orderDeliverReducer,
 } from "./reducers/orderReducer.js";
 const reducer = combineReducers({
   productList: productListReducers,
@@ -35,13 +39,17 @@ const reducer = combineReducers({
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
+  orderDeliver: orderDeliverReducer,
   orderMyList: userOrderListReducer,
+  orderList: OrderListReducer,
   userList: userListReducer,
   userDelete: userDeleteReducer,
   userUpdate: userUpdateReducer,
   productDelete: productDeleteReducer,
   productCreate: productCreateReducer,
   productUpdate: productUpdateReducer,
+  productReviewCreate: productReviewCreateReducer,
+  productTopRated: productTopRatedReducer,
 });
 
 // set the initial state of cart info from local storage

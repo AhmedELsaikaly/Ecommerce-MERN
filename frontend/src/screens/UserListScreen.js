@@ -55,7 +55,7 @@ const UserListScreen = ({ history }) => {
           <tbody>
             {users &&
               users.map((user) => (
-                <tr ket={user._id}>
+                <tr key={user._id}>
                   <td>{user._id}</td>
                   <td>{user.name}</td>
                   <td>
@@ -64,13 +64,13 @@ const UserListScreen = ({ history }) => {
                   <td>
                     {user.isAdmin ? (
                       <i
-                        class="fa fa-check"
+                        className="fa fa-check"
                         aria-hidden="true"
                         style={{ color: "green" }}
                       ></i>
                     ) : (
                       <i
-                        class="fa fa-times"
+                        className="fa fa-times"
                         aria-hidden="true"
                         style={{ color: "red" }}
                       ></i>

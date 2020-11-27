@@ -7,3 +7,52 @@ h3 {
 strong {
   font-weight: 900 !important;
 }
+h2 {
+  font-size: 1.4rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+/* .carousel .active {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+} */
+
+.card-img-top {
+  min-height: 250px;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}

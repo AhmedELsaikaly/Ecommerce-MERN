@@ -17,6 +17,7 @@ import UserListScreen from "./screens/UserListScreen.js";
 import UserEditScreen from "./screens/UserEditScreen.js";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
+import OrderListScreen from "./screens/OrderListScreen.js";
 const App = () => {
   return (
     <Router>
@@ -35,6 +36,13 @@ const App = () => {
             <Route exact path="/placeorder" component={PlaceOrderScreen} />
             <Route exact path="/order/:id" component={OrderScreen} />
             <Route exact path="/admin/userList" component={UserListScreen} />
+            <Route exact path="/admin/orderlist" component={OrderListScreen} />
+            <Route exact path="/search/:keyword" component={HomeScreen} />
+            <Route exact path="/page/:pageNumber" component={HomeScreen} />
+            <Route
+              path="/search/:keyword/page/:pageNumber"
+              component={HomeScreen}
+            />
             <Route
               exact
               path="/admin/user/:id/edit"
@@ -43,6 +51,11 @@ const App = () => {
             <Route
               exact
               path="/admin/productlist"
+              component={ProductListScreen}
+            />
+            <Route
+              exact
+              path="/admin/productlist/:pageNumber"
               component={ProductListScreen}
             />
             <Route
