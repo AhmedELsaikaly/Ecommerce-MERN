@@ -56,3 +56,9 @@ h1 {
     font-size: 2.5vw;
   }
 }
+@media (max-width: 768px) {
+  .search {
+    margin-top: 16px;
+  }
+}
+/* search */
