@@ -79,11 +79,8 @@ export const logout = (id) => (dispatch) => {
   });
 };
 
-// Register action
-export const register = (name, email, password) => async (
-  dispatch,
-  getState
-) => {
+// register action
+export const register = (name, email, password) => async (dispatch) => {
   try {
     dispatch({
       type: USER_REGISTER_REQUEST,
@@ -95,7 +92,11 @@ export const register = (name, email, password) => async (
       },
     };
 
-    const { data } = await axios.get({ name, email, password }, config);
+    const { data } = await axios.post(
+      "/api/users",
+      { name, email, password },
+      config
+    );
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
@@ -106,6 +107,7 @@ export const register = (name, email, password) => async (
       type: USER_LOGIN_SUCCESS,
       payload: data,
     });
+
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
