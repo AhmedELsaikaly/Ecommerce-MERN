@@ -51,6 +51,20 @@ h1 {
 .carousel a {
   margin: 0 auto;
 }
+.nav-link {
+  font-size: 14px;
+}
+.dropdown-item {
+  font-size: 16px;
+  font-weight: bold !important;
+}
+.dropdown-item:hover {
+  background-color: black;
+}
+.navbar-brand {
+  font-size: 17px;
+  font-weight: bolder;
+}
 @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;
@@ -61,4 +75,5 @@ h1 {
     margin-top: 16px;
   }
 }
+
 /* search */
